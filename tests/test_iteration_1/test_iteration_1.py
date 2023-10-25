@@ -33,3 +33,31 @@ def test_create_alignment():
 def test_create_armor_class():
     entity1 = Entity("bob", "good", 16)
     assert entity1.armor_class is 16
+
+# as a combatant I want to be able to attack other combatants so that I can
+# survive to fight another day
+    # roll a 20 sided die (don't code the die)
+    # roll must meet or beat oponents armor class to hit
+    # a natural roll of 20 always hits
+
+
+#######################
+# need to write an if else statement - if 20 = hit if <20 then miss
+
+def test_character_attack():
+    entity1 = Entity("bob", "good", 16 )    
+
+    # attack_roll = 0
+    # do_attack_roll = False
+
+    # if attack_roll >= armor_class:
+
+# entity 2 - defender character
+    entity2 = Entity("fred", "evil", 18 )
+# need to do a dice roll to see if we have an attack
+# entity1 does a dice roll -  has to be greater than entity2's 18
+
+    entity1.attack(entity2, 18)
+    # is roll >= .armorclass --- if it is then hit - if not nope
+    assert entity2.hp is 8 
+    #hp is currently 10 ---- entity2 is our target - a hit is -2? - so goes down to 8
