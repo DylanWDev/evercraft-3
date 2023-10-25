@@ -27,7 +27,7 @@ def test_create_alignment():
     assert entity1.alignment is "good"
 
 # as a combatant i want to have armor class and hit points so that i can resist attacks from my enemies
-    # has an armor class that defaults to 10
+    # has an armor class that defaults to 10, 0
     # has 5 hit points by default
 
 def test_create_armor_class():
@@ -59,5 +59,21 @@ def test_character_attack():
 
     entity1.attack(entity2, 18)
     # is roll >= .armorclass --- if it is then hit - if not nope
-    assert entity2.hp is 8 
+    assert entity2.hp is 9 
     #hp is currently 10 ---- entity2 is our target - a hit is -2? - so goes down to 8
+
+
+# as a character i want to accumulate exp points when i attack my enemies so that i can earn bragging rights at the tavern
+# when a successful attack occurs the character gains 10 exp
+
+def test_gain_character_xp():
+    defender = Entity("Lauren","neutral",4,2)
+    attacker = Entity("Dylan","evil", 1,4)
+    # doing the attack
+    attacker.attack(defender,20)
+    assert attacker.xp is 10
+
+# xp acquired when enemy is killed - when entity.hp is 0 or less than 0
+# add 10 xp to attacker
+
+# if attacking make 2 characters - an attacker and defender
