@@ -13,7 +13,7 @@ import pytest  #
 
 # test if we can assign input name as entity1 name
 def test_create_character():
-    entity1 = Entity("big bird") 
+    entity1 = Entity("big bird", "good", 16, 10) 
     assert entity1.name is "big bird"
 
 
@@ -23,7 +23,7 @@ def test_create_character():
     # alignments are good, evil, neutral
 
 def test_create_alignment():
-    entity1 = Entity("bob", "good", 16)
+    entity1 = Entity("bob", "good", 16, 10)
     assert entity1.alignment is "good"
 
 # as a combatant i want to have armor class and hit points so that i can resist attacks from my enemies
@@ -31,7 +31,7 @@ def test_create_alignment():
     # has 5 hit points by default
 
 def test_create_armor_class():
-    entity1 = Entity("bob", "good", 16)
+    entity1 = Entity("bob", "good", 16, 10)
     assert entity1.armor_class is 16
 
 # as a combatant I want to be able to attack other combatants so that I can
@@ -45,7 +45,7 @@ def test_create_armor_class():
 # need to write an if else statement - if 20 = hit if <20 then miss
 
 def test_character_attack():
-    entity1 = Entity("bob", "good", 16 )    
+    entity1 = Entity("bob", "good", 16, 10)    
 
     # attack_roll = 0
     # do_attack_roll = False
@@ -53,7 +53,7 @@ def test_character_attack():
     # if attack_roll >= armor_class:
 
 # entity 2 - defender character
-    entity2 = Entity("fred", "evil", 18 )
+    entity2 = Entity("fred", "evil", 18, 10)
 # need to do a dice roll to see if we have an attack
 # entity1 does a dice roll -  has to be greater than entity2's 18
 
