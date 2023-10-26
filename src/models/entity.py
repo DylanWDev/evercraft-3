@@ -52,7 +52,7 @@ class Entity:
 
         for x in self.abilities:
             value = ability[x] if (x in ability) else self.abilities[x] # new variable called value 
-            # assigns a value to the variable called value - uses conditional expression (basically a ternary)
+            # assigns a value to the  variable called value - uses conditional expression (basically a ternary)
                 # ability[x] - loops through our abilities one by one
                 # if (x in ability) - checks if within our kwargs that ability exists with a pre-determined number value
                     # if so use that for our entity/character
@@ -67,17 +67,18 @@ class Entity:
             # use setattribute to now finally connect within self aka whatever character/entity we create 
                 # x represents the abilities we loop through and mod is the newly attached modifier value to the corresponding abilities
 
+# BRAINSTORM FOR LOOP:
 # for loop to loop through the abilities within the entity class
 # looping over the variable - (default abilities) variable - making a new variable called value
-# 
 # value = kwargs 
 # if key is in abilities - else self.abilities (key)
     # key is x 
 # key is i (in terms of iterating through)
 # new variable called a = (a new class - of modifier ability values) - takes in 
 # set attribute 
+# FIRST - make a new class of modifier values 
 
-# make a new class of modifier values 
+
 
     def increase_xp(self):
         self.xp += 10
