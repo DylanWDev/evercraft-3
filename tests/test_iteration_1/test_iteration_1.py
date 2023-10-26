@@ -100,4 +100,55 @@ def test_character_leveling():
 
 # for every 100 kills you gain 1000 xp
 # when xp is divisible by 1000 ++level to entity
-# 
+
+
+
+# as a character I want to have several abilities so I'm not identical to other characters except in name
+# abilities are strngth, dexterity, constitution, wisdom, intelligence, charisma
+# Abilities range from 1 to 20 and default to 10
+# Abilities have modifiers according to the following table
+
+# example:
+# score:      ability modifier:
+# 1                   -5
+# 2                   -4
+# 3                   -4
+# 4                   -3
+# 5                   -3
+# 6                   -2
+# 7                   -2
+# 8                   -1
+# 9                   -1
+# 10                   0
+# 11                   0
+# 12                  +1
+# 13                  +1
+# 14                  +2
+# 15                  +2
+# 16                  +3
+# 17                  +3
+# 18                  +4
+# 19                  +4
+# 20                  +5 
+
+
+def test_ability_modifier():
+    entity1 = Entity("billy", "Good", 15, 10)
+    assert entity1.strength is not None
+
+# default ability value... (aka strength = 10)
+# what happens when we add a modifier to that default ability value 
+
+# attributes should already be within the entity function
+# test if the entity has the attributes? - like testing if the entity has a name
+    # test to see if null...
+
+# pass kwargs in and for loop through the kwargs and check if strength matches and if does
+# grab value and check dictionary for modifiers and grab modifier value and set it to strength value
+# for character
+
+# when you create character do a loop to rewrite the values of attributes for that character
+
+def test_ability_dexterity():
+    entity1 = Entity("billy", "Good", 15, 10)
+    assert entity1.dexterity is 12
