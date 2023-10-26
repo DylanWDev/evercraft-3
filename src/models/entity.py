@@ -7,6 +7,7 @@ class Entity:
         self.armor_class = armor_class
         self.hp = hp
         self.xp = 0
+        self.level = 1
 
     def increase_xp(self):
         self.xp += 10
@@ -19,3 +20,8 @@ class Entity:
         if target.hp <= 0:
             # self = attacker :)
             Entity.increase_xp(self)
+
+    def level_up(self):
+        # to be more modular make the leveling up dependent on xp not kill count
+        if self.xp % 1000 == 0:
+            self.level += 1

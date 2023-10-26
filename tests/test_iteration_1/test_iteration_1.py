@@ -77,3 +77,27 @@ def test_gain_character_xp():
 # add 10 xp to attacker
 
 # if attacking make 2 characters - an attacker and defender
+
+# -----------------------------------------------------------
+
+# Feature: A Character Can Level
+# As a character I want my experience points to increase my level and combat 
+#   capabilities so that I can bring vengeance to my foes
+
+# Level defaults to 1
+# After 1000 experience points, the character gains a level
+# 0 xp -> 1st Level
+# 1000 xp -> 2nd Level
+# 2000 xp -> 3rd Level
+# etc.
+# For each level:
+# hit points increase by 5 plus Constitution modifier
+# 1 is added to attack roll for every even level achieved
+
+def test_character_leveling():
+    entity1 = Entity("billy", "Good", 15, 10)
+    assert entity1.level is 1
+
+# for every 100 kills you gain 1000 xp
+# when xp is divisible by 1000 ++level to entity
+# 
