@@ -1,7 +1,7 @@
 #from src.models.roles import Fighter
 #from src.models.entity import Entity
 import numpy as np
-import lib.m.roles
+from lib.m.roles import Fighter
 
 import pytest
 
