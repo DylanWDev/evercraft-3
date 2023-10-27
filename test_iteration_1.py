@@ -1,4 +1,4 @@
-from src.models.entity import Entity
+from lib.m.entity import Entity
 import pytest  #
 
 # Feature: Create a Character
